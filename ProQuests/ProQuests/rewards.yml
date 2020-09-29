@@ -1,0 +1,163 @@
+# ======================================================
+# 
+# ProQuests Version: 1.4.9.5 build: 63775
+# Created by: JC_Plays_MC
+# 
+# ======================================================
+# 
+# Rewards File
+# 
+# This is the rewards file where all rewards data will be saved and stored. You can
+# edit all of the settings pertaining to the rewardss here such as the total amount
+# or leaders to track and the format how to display them.
+# 
+# ======================================================
+# 
+# Settings:
+# 
+# The amount of players to track in the rewards
+# total: 10
+# 
+# The delay in seconds between updates of the rewards
+# update_delay: 600
+# 
+# Whether or not you want the monthly stats to automatically reset
+# reset_on_month: true
+# 
+# Whether or not you want to use the menu or chat based rewards display
+# use_menu: true
+# 
+# ======================================================
+# 
+# Settings:
+# 
+# Whether or not you want to use the weekly leaders rewards
+# use_weekly_rewards: true
+# 
+# Whether or not you want to use the monthly leaders rewards
+# use_monthly_rewards: true
+# 
+# ======================================================
+# 
+# Rewards:
+# 
+# weekly_rewards:
+#   first_place: ##The identifier for the reward
+#     positions: [] ##The positions which will receive this reward
+#     actions: [] ##The actions to be executed for the reward
+# 
+# monthly_rewards:
+#   first_place: ##The identifier for the reward
+#     positions: [] ##The positions which will receive this reward
+#     actions: [] ##The actions to be executed for the reward
+# 
+# ======================================================
+# 
+# Rewards Example:
+# 
+# weekly_rewards:
+#   first_place:
+#     positions:
+#     - 1
+#     actions:
+#     - '[GiveItem] EMERALD;64'
+#     - '[Message] &7You came in &a1st &7place this week!'
+#   top_five:
+#     positions:
+#     - 2
+#     - 3
+#     - 4
+#     - 5
+#     actions:
+#     - '[GiveItem] DIAMOND;64'
+#     - '[Message] &7You came in the top 5 this week!'
+# 
+# ======================================================
+# 
+# Placeholders:
+# There are a bunch of placeholders built into the plugin that can be used in messages or
+# item names, lore etc. These can all be found on the plugin/wiki page.
+# 
+# Actions:
+# Actions are the method used to reward players. Whether it be executing a command or
+# giving a player an item there are extensive ways to reward players. Below are the valid
+# actions that can be used in the plugin. Also you can use placeholders in the actions to have even
+# more customization options.
+# 
+# ** Please note that all actions are case-sensitive **
+# 
+# [Chance=<percent>] [<action>] - Chance out of 100% that this action will be performed
+# [Delay=<time>] [<action>] - Delays the action to be performed after the delay period in seconds
+# [PlayerCommand] <command> - Executes the command as a player
+# [ConsoleCommand] <command> - Executes the command as the console
+# [OperatorCommand] <command> - Executes the command as the console
+# [Broadcast] <message> - Broadcasts the following message to the server
+# [Message] <message> - Sends the following message to the player
+# [JSONBroadcast] <message> - Sends the following json message to the server
+# [JSONMessage] <message> - Sends the following json to the player
+# [Sound] <sound value> - Plays the sound for the player
+# [VaultGive] <amount> - Adds the amount to the players Vault economy balance
+# [VaultTake] <amount> - Take the amount from the players Vault economy balance
+# [GiveItem] <material;amount> - Gives the specified item to the player
+# [GiveItem] <material;amount;data> - Gives the specified item to the player
+# [GiveItem] <material;amount;data;name> - Gives the specified item to the player
+# [Teleport] <world name;x;y;z> - Teleports the player to the specified coordinates
+# [Teleport] <world name;x;y;z;yaw;pitch> - Teleports the player to the specified coordinates
+# [Title] <title> - Displays the title for the player
+# [Title] <title>;<subtitle> - Displays the title & subtitle for the player
+# [ActionBar] <message> - Displays the message in the actionbar for the player
+# [Bungee] <server> - Sends the player to the specified bungee server
+# [AddPoints] <amount> - Adds X points for the player
+# [SubtractPoints] <amount> - Subtracts X points from the player
+# 
+# ======================================================
+
+settings:
+  use_monthly_rewards: true
+  use_weekly_rewards: true
+weekly_rewards:
+  first_place:
+    positions:
+    - 1
+    actions:
+    - '[GiveItem] DIAMOND;64'
+    - '[Message] &e[&e&lQUESTS&e] &7You finished &a&l1st Place &7with the most weekly
+      points! &7(&b%weekly_points% points&7)'
+  top_ten:
+    positions:
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    actions:
+    - '[GiveItem] GOLD_INGOT;16'
+    - '[Message] &e[&e&lQUESTS&e] &7You finished in the top ten this week! &7(&a#%place%&7)
+      &7(&b%weekly_points% points&7)'
+monthly_rewards:
+  first_place:
+    positions:
+    - 1
+    actions:
+    - '[GiveItem] EMERALD;64'
+    - '[Message] &e[&e&lQUESTS&e] &7You finished &a&l1st Place &7with the most monthly
+      points! &7(&b%monthly_points% points&7)'
+  top_ten:
+    positions:
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+    - 7
+    - 8
+    - 9
+    - 10
+    actions:
+    - '[GiveItem] GOLD_INGOT;16'
+    - '[Message] &e[&e&lQUESTS&e] &7You finished in the top ten this month! &7(&a#%place%&7)
+      &7(&b%monthly_points% points&7)'

@@ -1,0 +1,173 @@
+# ======================================================
+# 
+# ProQuests Version: 1.4.9.5 build: 63775
+# Created by: JC_Plays_MC
+# 
+# ======================================================
+# 
+# Menu File
+# 
+# This is the menu file where all of the items which will be displayed in
+# the quests menus will be defined. Each item has 5 states which will display
+# differently based on the players relation to the quest. You can create as many quest
+# menus as you wish.
+# 
+# ======================================================
+# 
+# Menu Example:
+# 
+# menu:
+#   <menu identifier>:
+#     name: '&8Quests'
+#     size: 54
+#     <quest identifier>:
+#       slot: 0
+#       waiting:
+#         item: EMERALD_BLOCK;1;0
+#         name: '&aWaiting'
+#         glow: false
+#         lore:
+#         - '&7Waiting for quest'
+#       completed:
+#         item: EMERALD_BLOCK;1;0
+#         name: '&aCompleted'
+#         glow: false
+#         lore:
+#         - '&7Completed quest'
+#       active:
+#         item: STONE;1;0
+#         name: '&aIn Progress'
+#         glow: true
+#         lore:
+#         - '&7%quest_remaining_duration%'
+#       available:
+#         item: STONE;1;0
+#         name: '&aStart now!'
+#         glow: false
+#         lore:
+#         - '&7Click to start!'
+#       unavailable:
+#         item: COAL_BLOCK;1;0
+#         name: '&cUnavailable'
+#         glow: false
+#         lore:
+#         - '&7Quest is unavailable'
+# 
+# ======================================================
+# 
+# Item Format:
+# All menu items are formatted in the following way for defining items for the menu. Items use
+# the following format <Material>;<Amount>;<Data>
+# 
+# A list of valid materials can be found here: 
+# https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+# 
+# Placeholders:
+# There are a bunch of placeholders built into the plugin that can be used in messages or
+# item names, lore etc. These can all be found on the plugin page.
+# 
+# ======================================================
+
+menu:
+  menu_1:
+    name: '&8Quests'
+    size: 54
+    break_quest_1:
+      slot: 0
+      waiting:
+        item: EMERALD_BLOCK;1;0
+        name: '&aCompleted!'
+        glow: false
+        lore:
+        - '&7You have completed this quest, and'
+        - '&7can repeat it in %quest_repeat_delay%'
+      completed:
+        item: EMERALD_BLOCK;1;0
+        name: '&aCompleted!'
+        glow: false
+        lore:
+        - '&7You have completed this quest, why'
+        - '&7not start another one!'
+      active:
+        item: STONE;1;0
+        name: '&eBlock Breaker!'
+        glow: true
+        lore:
+        - '&7You only have %quest_remaining_duration%'
+        - '&7to complete this quest'
+        - ''
+        - '&6Goal: &fBreak 15 blocks'
+        - '%quest_progress_bar%'
+        - '&8&m-------------------'
+        - '&e&lREWARD:'
+        - '&7- &a$5000'
+        - '&8&m-------------------'
+        - '&f[Shift-Right-Click] to cancel'
+      available:
+        item: STONE;1;0
+        name: '&6Block Breaker!'
+        glow: false
+        lore:
+        - '&7You are eligble to begin this quest!'
+        - '&7Click to start now!'
+        - ''
+        - '&6Goal: &fBreak 15 blocks'
+        - '&8&m-------------------'
+        - '&e&lREWARD:'
+        - '&7- &a$5000'
+      unavailable:
+        item: COAL_BLOCK;1;0
+        name: '&cBlock Breaker!'
+        glow: false
+        lore:
+        - '&7You are ineligable to begin this quest,'
+        - '&7as you have not completed the required quests'
+    chat_quest_1:
+      slot: 1
+      waiting:
+        item: EMERALD_BLOCK;1;0
+        name: '&aCompleted!'
+        glow: false
+        lore:
+        - '&7You have completed this quest, and'
+        - '&7can repeat it in %quest_repeat_delay%'
+      completed:
+        item: EMERALD_BLOCK;1;0
+        name: '&aCompleted!'
+        glow: false
+        lore:
+        - '&7You have completed this quest, why'
+        - '&7not start another one!'
+      active:
+        item: STONE;1;0
+        name: '&eWord Speaker!'
+        glow: true
+        lore:
+        - '&7You only have %quest_remaining_duration%'
+        - '&7to complete this quest'
+        - ''
+        - '&6Goal: &fSay ''im awesome!'''
+        - '&8&m-------------------'
+        - '&e&lREWARD:'
+        - '&7- &a64x Diamonds'
+        - '&8&m-------------------'
+        - '&f[Shift-Right-Click] to cancel'
+      available:
+        item: STONE;1;0
+        name: '&6Word Speaker!'
+        glow: false
+        lore:
+        - '&7You are eligble to begin this quest!'
+        - '&7Click to start now!'
+        - ''
+        - '&6Goal: &fSay ''im awesome!'''
+        - '&8&m-------------------'
+        - '&e&lREWARD:'
+        - '&7- &a64x Diamonds'
+      unavailable:
+        item: COAL_BLOCK;1;0
+        name: '&cWord Speaker!'
+        glow: false
+        lore:
+        - '&7You are ineligable to begin this quest,'
+        - '&7as you have not completed the required quests'

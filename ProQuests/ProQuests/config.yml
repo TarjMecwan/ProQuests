@@ -1,0 +1,81 @@
+# ======================================================
+# 
+# ProQuests Version: 1.4.9.5 build: 63775
+# Created by: JC_Plays_MC
+# 
+# ======================================================
+# 
+# This is the ProQuests configuration file where all general settings
+# and other plugin toggles will be found. If you have any questions feel free
+# to ask me by PM on spigot. Also if you have any feature suggestions
+# or anything like that i'm always open to new ideas.
+# 
+# Thank you for supporting this project!
+# 
+# ======================================================
+# 
+# Settings Configuration
+# 
+# If you plan on saving data to a MySQL database
+# use_mysql: false
+# 
+# Your MySQL settings (only required if using MySQL)
+# host: localhost
+# port: 3306
+# database: database
+# username: user
+# password: pass
+# 
+# The default menu to open when using /quest menu
+# default_menu: menu_1
+# 
+# Determines whether or not the menu will update while a player has it open
+# update_menu: true
+# 
+# The delay in seconds between menu item updates
+# update_delay: 5
+# 
+# The delay in seconds between plugin time updates (for quests which require constant timed checks)
+# update_interval: 60
+# 
+# The maximum amount of quests a player can have active at a time
+# max_active_quests: 10
+# 
+# Determines whether or not a player can start a quest while in creative
+# allow_creative_quest: false
+# 
+# Determines whether or not a player can start a quest while op
+# allow_op_quest: false
+# 
+# Whether or not you want to use quest point multipliers
+# use_multipliers: false
+# 
+# The command the player must enter to complete any obtain quests
+# obtain_quest_command: qfinish
+# 
+# All of the quest NPC's will be stored here.
+# npc_list: []
+# 
+# ======================================================
+
+use_mysql: false
+host: localhost
+port: 3306
+database: database
+username: user
+password: pass
+default_menu: menu_1
+update_menu: true
+update_delay: 5
+update_interval: 60
+max_active_quests: 10
+allow_creative_quest: false
+allow_op_quest: false
+use_multipliers: false
+obtain_quest_command: qfinish
+factions_hook: false
+votifier_hook: false
+progress_bar_start: '&f┃'
+progress_bar_unfinished: '&7░'
+progress_bar_finished: '&f░'
+progress_bar_end: '&f┃'

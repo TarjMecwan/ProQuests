@@ -1,0 +1,84 @@
+# ======================================================
+# 
+# ProQuests Version: 1.4.9.5 build: 63775
+# Created by: JC_Plays_MC
+# 
+# ======================================================
+# 
+# NPC File
+# 
+# This is the NPC file where all ProQuests NPC data will be stored.
+# Whether it be a menu NPC or a quest NPC they will all be stored here.
+# It is highly recommended that you create the NPC's in-game using the
+# NPC create command.
+# 
+# ======================================================
+# 
+# NPC Example:
+# 
+# npcs:
+#   <npc identfier>:
+#     npc_type: <menu | quest>
+#     menu_id: <menu id>
+#     location: <world>,<x>,<y>,<z>
+#     entity_type: <type>
+#     name: <entity name>
+#     out_of_quests_actions:
+#     - [Message] &cNo more quests
+#     linked_quests:
+#     - <quest id>
+# 
+# LeaderNPC Example:
+# 
+# npcs:
+#   <npc identfier>:
+#     npc_type: LEADER
+#     leaderboard_type: <weekly | monthly | lifetime | completed>
+#     location: <world>,<x>,<y>,<z>,<yaw>,<pitch>
+#     position: <position>
+#     actions:
+#     - <action>
+#     hologram_lines:
+#     - <line>
+# 
+# ======================================================
+# 
+# Placeholders:
+# There are a bunch of placeholders built into the plugin that can be used in messages or
+# item names, lore etc. These can all be found on the plugin/wiki page.
+# 
+# Actions:
+# Actions are the method used to reward players for completing quests. Whether it be executing a
+# command or giving a player an item there are extensive ways to reward players. Below are the valid
+# actions that can be used in the plugin. Also you can use placeholders in the actions to have even
+# more customization options.
+# 
+# ** Please note that all actions are case-sensitive **
+# 
+# [Chance=<percent>] [<action>] - Chance out of 100% that this action will be performed
+# [Delay=<time>] [<action>] - Delays the action to be performed after the delay period in seconds
+# [PlayerCommand] <command> - Executes the command as a player
+# [ConsoleCommand] <command> - Executes the command as the console
+# [OperatorCommand] <command> - Executes the command as the console
+# [Broadcast] <message> - Broadcasts the following message to the server
+# [Message] <message> - Sends the following message to the player
+# [JSONBroadcast] <message> - Sends the following json message to the server
+# [JSONMessage] <message> - Sends the following json to the player
+# [Sound] <sound value> - Plays the sound for the player
+# [VaultGive] <amount> - Adds the amount to the players Vault economy balance
+# [VaultTake] <amount> - Take the amount from the players Vault economy balance
+# [GiveItem] <material;amount> - Gives the specified item to the player
+# [GiveItem] <material;amount;data> - Gives the specified item to the player
+# [GiveItem] <material;amount;data;name> - Gives the specified item to the player
+# [Teleport] <world name;x;y;z> - Teleports the player to the specified coordinates
+# [Teleport] <world name;x;y;z;yaw;pitch> - Teleports the player to the specified coordinates
+# [Title] <title> - Displays the title for the player
+# [Title] <title>;<subtitle> - Displays the title & subtitle for the player
+# [ActionBar] <message> - Displays the message in the actionbar for the player
+# [Bungee] <server> - Sends the player to the specified bungee server
+# [AddPoints] <amount> - Adds X points for the player
+# [SubtractPoints] <amount> - Subtracts X points from the player
+# 
+# ======================================================
+
+npcs: {}

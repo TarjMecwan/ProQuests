@@ -1,0 +1,119 @@
+# ======================================================
+# 
+# ProQuests Version: 1.4.9.5 build: 63775
+# Created by: JC_Plays_MC
+# 
+# ======================================================
+# 
+# Quests File
+# 
+# This is the quest file where all quest data will be saved and stored. You can
+# create quests directly from this file however it is recommended that you use the
+# in-game editor as it will assist you in making sure everything is formatted correctly.
+# 
+# ======================================================
+# 
+# Quests Example
+# 
+# quests:
+#   <Quest Identifier>:
+#     type: BREAK_QUEST
+#     total: 50
+#     duration: 600
+#     repeat_delay: 600
+#     repeatable: true
+#     required_quests: []
+#     allowed_worlds: []
+#     allowed_materials:
+#     - STONE;0
+#     complete_actions:
+#     - '[Message] &aYou completed it!'
+#     - '[ConsoleCommand] op %player%'
+# 
+# ======================================================
+# 
+# Quest Type:
+# Each quest has a unique type identifier which must be specified per quest as they all
+# have unqiue attributes and toggles that will be checked for. For a complete description and a 
+# list of quest attributes be sure to view the plugin page.
+# 
+# Placeholders:
+# There are a bunch of placeholders built into the plugin that can be used in messages or
+# item names, lore etc. These can all be found on the plugin page.
+# 
+# Actions:
+# Actions are the method used to reward players for completing quests. Whether it be executing a
+# command or giving a player an item there are extensive ways to reward players. Below are the valid
+# actions that can be used in the plugin. Also you can use placeholders in the actions to have even
+# more customization options.
+# 
+# ** Please note that all actions are case-sensitive **
+# 
+# [Chance=<percent>] [<action>] - Chance out of 100% that this action will be performed
+# [Delay=<time>] [<action>] - Delays the action to be performed after the delay period in seconds
+# [PlayerCommand] <command> - Executes the command as a player
+# [ConsoleCommand] <command> - Executes the command as the console
+# [OperatorCommand] <command> - Executes the command as the console
+# [Broadcast] <message> - Broadcasts the following message to the server
+# [Message] <message> - Sends the following message to the player
+# [JSONBroadcast] <message> - Sends the following json message to the server
+# [JSONMessage] <message> - Sends the following json to the player
+# [Sound] <sound value> - Plays the sound for the player
+# [VaultGive] <amount> - Adds the amount to the players Vault economy balance
+# [VaultTake] <amount> - Take the amount from the players Vault economy balance
+# [GiveItem] <material;amount> - Gives the specified item to the player
+# [GiveItem] <material;amount;data> - Gives the specified item to the player
+# [GiveItem] <material;amount;data;name> - Gives the specified item to the player
+# [Teleport] <world name;x;y;z> - Teleports the player to the specified coordinates
+# [Teleport] <world name;x;y;z;yaw;pitch> - Teleports the player to the specified coordinates
+# [Title] <title> - Displays the title for the player
+# [Title] <title>;<subtitle> - Displays the title & subtitle for the player
+# [ActionBar] <message> - Displays the message in the actionbar for the player
+# [Bungee] <server> - Sends the player to the specified bungee server
+# [AddPoints] <amount> - Adds X points for the player
+# [SubtractPoints] <amount> - Subtracts X points from the player
+# 
+# ======================================================
+
+quests:
+  break_quest_1:
+    type: BREAK_QUEST
+    total: 15
+    duration: 300
+    repeat_delay: 600
+    start_cost: 0
+    min_active: 0
+    min_completed: 0
+    repeatable: false
+    cancelable: true
+    command_start: true
+    required_quests: []
+    allowed_worlds: []
+    allowed_materials: []
+    start_actions:
+    - '[Title] &aGoal:;&7Break 15 blocks!'
+    complete_actions:
+    - '[Title] &eQuest Completed!;&6Reward: &a$&f5k'
+    - '[ConsoleCommand] eco give %player% 5000'
+    - '[AddPoints] 10'
+  chat_quest_1:
+    type: CHAT_QUEST
+    response: Im Awesome!
+    duration: 300
+    repeat_delay: 600
+    start_cost: 0
+    min_active: 0
+    min_completed: 0
+    repeatable: true
+    cancelable: true
+    command_start: true
+    required_quests:
+    - break_quest_1
+    allowed_worlds:
+    - world
+    start_actions:
+    - '[Title] &aGoal:;&7Say ''Im Awesome!'''
+    complete_actions:
+    - '[Title] &eQuest Completed!;&6Reward: &a64x &fDiamond'
+    - '[GiveItem] DIAMOND;64'
+    - '[AddPoints] 25'

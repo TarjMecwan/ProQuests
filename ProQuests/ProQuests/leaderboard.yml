@@ -1,0 +1,143 @@
+# ======================================================
+# 
+# ProQuests Version: 1.4.9.5 build: 63775
+# Created by: JC_Plays_MC
+# 
+# ======================================================
+# 
+# Leaderboard File
+# 
+# This is the leaderboard file where all leaderboard data will be saved and stored. You can
+# edit all of the settings pertaining to the leaderboards here such as the total amount
+# or leaders to track and the format how to display them.
+# 
+# ======================================================
+# 
+# Settings:
+# 
+# The amount of players to track in the leaderboard
+# total: 10
+# 
+# The delay in seconds between updates of the leaderboard
+# update_delay: 600
+# 
+# Whether or not you want the monthly stats to automatically reset
+# reset_on_month: true
+# 
+# Whether or not you want to use the menu or chat based leaderboard display
+# use_menu: true
+# 
+# ======================================================
+# 
+# Menu Example:
+# 
+# menu:
+#   size: 27
+#   name: '&8Quest Leaders'
+#   leader_slots:
+#   - 11
+#   - 12
+#   - 13
+#   - 14
+#   - 15
+#   valid_name: '&a%position%. &7%player%'
+#   valid_lore:
+#   - '&bMonthly Points: &7%monthly_points%
+#   - '&bTotal Points: &7%total_points%
+#   - '&bQuests Completed: &7%total_completed_quests%
+#   invalid_name: '&cUnavailable'
+#   invalid_lore:
+#   - '&7You could be here!
+# 
+#   ** This leaderboard menu system is very simliar to the **
+#   ** quest menu system especially with the placeholder items **
+# 
+# ======================================================
+# 
+# Leaders Section:
+# 
+# The leaders section is a way for the plugin to cache the top users without
+# actually having to cache the player data. This is only used for users who have MySQL
+# enabled. What this does is store the top players UUID's so that on a server restart
+# it won't have to wait for the players to join to update their data, so the top
+# players will always be listed.
+# 
+# ======================================================
+# 
+# Placeholders:
+# There are a bunch of placeholders built into the plugin that can be used in messages or
+# item names, lore etc. These can all be found on the plugin/wiki page.
+# 
+# ======================================================
+
+settings:
+  total: 10
+  update_delay: 600
+  reset_on_month: true
+  use_menu: true
+menu:
+  size: 36
+  name: '&8Quest Leaders'
+  leader_slots:
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  valid:
+    name: '&a%position%. &7%player%'
+    lore:
+    - '&bWeekly Points: &7%weekly_points%'
+    - '&bMonthly Points: &7%monthly_points%'
+    - '&bTotal Points: &7%total_points%'
+    - '&bQuests Completed: &7%total_completed_quests%'
+  invalid:
+    name: '&cUnavailable'
+    lore:
+    - '&7You could be here!'
+  placeholder_items:
+    top_weekly:
+      slot: 28
+      item: GOLD_INGOT;1;0
+      name: '&aTop Weekly Players'
+      lore:
+      - '&7Click to view the players'
+      - '&7with the top points this week'
+      glow: false
+      actions:
+      - '[PlayerCommand] proquests leaderboard weekly'
+    top_monthly:
+      slot: 30
+      item: DIAMOND;1;0
+      name: '&aTop Monthly Players'
+      lore:
+      - '&7Click to view the players'
+      - '&7with the top points this month'
+      glow: false
+      actions:
+      - '[PlayerCommand] proquests leaderboard monthly'
+    top_lifetime:
+      slot: 32
+      item: EMERALD;1;0
+      name: '&aTop Lifetime Players'
+      lore:
+      - '&7Click to view the players'
+      - '&7with the top lifetime points'
+      glow: false
+      actions:
+      - '[PlayerCommand] proquests leaderboard lifetime'
+    top_completed:
+      slot: 34
+      item: REDSTONE;1;0
+      name: '&aTop Completed Quests'
+      lore:
+      - '&7Click to view the players'
+      - '&7with the most completed quests'
+      glow: false
+      actions:
+      - '[PlayerCommand] proquests leaderboard completed'
+leaders:
+  weekly: []
+  monthly: []
+  lifetime: []
+  completed: []
